@@ -1,0 +1,50 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.rooms-accordion-container {
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.rooms-accordion-container {
+  padding: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding-left: 40px;
+}
+
+.room-item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.room-image {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.room-item .card-body {
+  padding: 20px;
+}
+
+.room-item h2 {
+  font-size: 1.25rem;
+}
+
+.room-item h6 {
+  font-size: 1rem;
+}
+
+.room-item p {
+  font-size: 0.875rem;
+}
+
+.text-primary {
+  color: #007bff !important;
+}

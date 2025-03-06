@@ -1,0 +1,32 @@
+.booking-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .booking-card-img {
+    height: 200px;
+  }
+}
+
+.booking-status {
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.booking-status svg {
+  font-size: 1rem;
+  margin-right: 0.25rem;
+}

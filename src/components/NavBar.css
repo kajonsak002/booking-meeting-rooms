@@ -1,0 +1,121 @@
+/* Navbar background */
+.navbar-gradient {
+  background: linear-gradient(45deg, #3f51b5, #5c6bc0);
+  padding: 0.5rem 1rem;
+}
+
+/* Navbar Brand Style */
+.navbar-brand {
+  font-size: 1.6rem;
+  color: #ffffff !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+/* Style for navbar links */
+.nav-link {
+  position: relative;
+  padding: 0.7rem 1rem;
+  color: #e8eaf6 !important;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #c5cae9 !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #c5cae9;
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Active link styling */
+.nav-link.active {
+  color: #c5cae9 !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Dropdown styling */
+.user-dropdown .dropdown-toggle {
+  color: #e8eaf6 !important;
+  background-color: transparent !important;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.user-dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.user-dropdown .dropdown-toggle:hover,
+.user-dropdown .dropdown-toggle:focus {
+  color: #c5cae9 !important;
+}
+
+.user-dropdown .dropdown-menu {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+}
+
+.dropdown-item-custom {
+  color: #3f51b5 !important;
+  padding: 0.7rem 1.5rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item-custom:hover {
+  background-color: #e8eaf6;
+  color: #1a237e !important;
+}
+
+.dropdown-item-custom .MuiSvgIcon-root {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.username {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 1rem;
+  }
+
+  .nav-link::after {
+    bottom: -4px;
+  }
+
+  .user-dropdown {
+    margin-top: 0.5rem;
+  }
+}

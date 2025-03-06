@@ -1,0 +1,54 @@
+@startuml
+
+box "Form1" #LightBlue
+  rectangle "InitializeComponent()" as Init
+  rectangle "textBox1_KeyDown()" as TB1KD
+  rectangle "textBox2_KeyDown()" as TB2KD
+  rectangle "button1_Click_1()" as Btn1C
+  rectangle "button2_Click()" as Btn2C
+  rectangle "inputChecker()" as InputChk
+  rectangle "Clear_Textbox()" as ClearTB
+  rectangle "ResultPower()" as ResPower
+end box
+
+rectangle "User" as User
+rectangle "MessageBox" as Msg
+
+User --> Init : Open Form
+Init --> TB1KD : textBox1 Focus
+
+User --> TB1KD : Press Enter
+TB1KD --> InputChk : Validate (2,10)
+InputChk --> TB1KD : Return Result
+alt Invalid Input
+    TB1KD --> ClearTB : Clear Textbox
+    ClearTB --> Msg : Show Error
+else Valid Input
+    TB1KD --> TB2KD : Focus textBox2
+end
+
+User --> TB2KD : Press Enter
+TB2KD --> InputChk : Validate (2,12)
+InputChk --> TB2KD : Return Result
+alt Invalid Input
+    TB2KD --> ClearTB : Clear Textbox
+    ClearTB --> Msg : Show Error
+else Valid Input
+    TB2KD --> Btn1C : Focus Button 1
+end
+
+User --> Btn1C : Click Button 1
+alt Input Complete
+    Btn1C --> ResPower : Compute Result
+    ResPower --> Msg : Show Output
+    Btn1C --> Btn2C : Focus Button 2
+else Missing Input
+    Btn1C --> Msg : Show Warning
+end
+
+User --> Btn2C : Click Button 2
+Btn2C --> TB1KD : Clear textBox1
+Btn2C --> TB2KD : Clear textBox2
+Btn2C --> TB1KD : Focus textBox1
+
+@enduml

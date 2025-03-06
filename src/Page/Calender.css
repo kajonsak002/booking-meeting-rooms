@@ -1,0 +1,52 @@
+/* Calender.css */
+.custom-event-content {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 50px; /* Limit event height */
+}
+
+.fc-daygrid-day-events {
+  max-height: 70px; /* Limit event container height */
+  overflow-y: auto;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.5rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.fc .fc-daygrid-day-number {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fc .fc-daygrid-day-number:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.fc-event-title {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.fc .fc-col-header-cell-cushion {
+  display: inline-block;
+  padding: 2px 4px;
+  text-decoration: none;
+  color: black;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.5rem;
+  color: #020a13;
+  text-decoration: none;
+}
